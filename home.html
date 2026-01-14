@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SERPENTAIRE - Bolsos de Lujo Inteligentes</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Estilos ficha producto -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="mainHeader">
+    <div class="header-container">
+      <div class="header-top">
+        <nav class="nav-menu">
+          <div class="nav-dropdown">
+            <!-- Aquí sí va el dropdown dinámico -->
+            <button class="nav-link" id="bagDropdownBtn">Bolsos ▾</button>
+            <div class="dropdown-menu" id="bagDropdown"></div>
+          </div>
+          <button class="nav-link" id="accessoriesBtn">Accesorios</button>
+          <button class="nav-link" id="leatherBtn">Marroquinería</button>
+        </nav>
+
+        <div class="logo" id="mainLogo">
+          <!-- Desde la ficha, el logo te devuelve a la portada -->
+          <h1><a href="index.html">SERPENTAIRE</a></h1>
+        </div>
+
+        <div class="header-icons">
+          <button class="icon-btn" aria-label="Buscar">
+            <!-- svg buscar -->
+          </button>
+          <button class="icon-btn" aria-label="Carrito">
+            <!-- svg carrito -->
+          </button>
+          <button class="icon-btn" aria-label="Favoritos">
+            <!-- svg favoritos -->
+          </button>
+          <button class="icon-btn" aria-label="Usuario">
+            <!-- svg usuario -->
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section PRODUCTO -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-background">
+      <div class="hero-image-layer"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Colección 2025</p>
+      <h2 class="hero-title">Elegancia Inteligente</h2>
+      <p class="hero-description">
+        Bolsos de lujo con tecnología GPS integrada.<br />
+        Donde el diseño encuentra la innovación.
+      </p>
+      <button class="hero-cta" id="exploreCta">Explorar colección</button>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">Desplazar</span>
+      <!-- icono flecha -->
+    </div>
+  </section>
+
+  <!-- Main Content: producto -->
+  <main class="main-content">
+    <!-- Product Detail -->
+    <section class="product-section">
+      <div class="product-container">
+        <!-- Galería -->
+        <div class="gallery-column">
+          <div class="main-image-wrapper">
+            <button class="gallery-nav prev-btn" id="prevBtn">
+              <!-- svg flecha izq -->
+            </button>
+            <div class="main-image-container">
+              <img id="mainImage" src="" alt="Bolso Serpenté" />
+            </div>
+            <button class="gallery-nav next-btn" id="nextBtn">
+              <!-- svg flecha der -->
+            </button>
+          </div>
+          <div class="thumbnails" id="thumbnailsContainer"></div>
+        </div>
+
+        <!-- Info -->
+        <div class="info-column">
+          <div class="product-info">
+            <div class="product-header">
+              <h2 class="product-title" id="productTitle">Bolso Serpenté</h2>
+              <button class="wishlist-btn" aria-label="Añadir a favoritos">
+                <!-- svg corazón -->
+              </button>
+            </div>
+            <p class="product-price" id="productPrice">445 EUR</p>
+            <p class="product-description" id="productDescription">
+              Bolso de piel marine con bordado dorado y localizador integrado. Combina estilo y seguridad en una belleza exclusiva.
+            </p>
+
+            <!-- Colores -->
+            <div class="colors-section">
+              <h3>colores</h3>
+              <div class="color-grid" id="colorGrid"></div>
+            </div>
+
+            <!-- Botón carrito -->
+            <button class="add-to-cart-btn" id="addToCartBtn">Añadir a la cesta</button>
+            <p class="stock-status">En stock</p>
+
+            <!-- Detalles -->
+            <div class="expandable-section">
+              <button class="expand-btn" data-section="details">
+                <span>Detalles</span>
+                <span class="expand-icon">
+                  <!-- svg flecha -->
+                </span>
+              </button>
+              <div class="section-content" id="details">
+                <p id="detailsContent">
+                  Dimensiones: 35cm x 25cm x 15cm
+                </p>
+              </div>
+            </div>
+
+            <!-- Cuidados -->
+            <div class="expandable-section">
+              <button class="expand-btn" data-section="care">
+                <span>Cuidados</span>
+                <span class="expand-icon">
+                  <!-- svg flecha -->
+                </span>
+              </button>
+              <div class="section-content" id="care">
+                <p id="careContent">
+                  Limpiar con paño suave y seco.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential Companions -->
+    <section class="companions-section">
+      <div class="section-container">
+        <h2 class="section-title">Combinación perfecta</h2>
+        <div class="companions-grid" id="companionsGrid"></div>
+      </div>
+    </section>
+
+    <!-- You Might Like -->
+    <section class="suggestions-section">
+      <div class="section-container">
+        <h2 class="section-title">También te gustará</h2>
+        <div class="suggestions-grid" id="suggestionsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- mismo footer -->
+  </footer>
+
+  <!-- Script PRODUCTO -->
+  <script src="script.js"></script>
+</body>
+</html>
