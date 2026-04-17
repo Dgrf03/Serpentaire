@@ -1,6 +1,6 @@
 /* ============================================================
    SERPENTAIRE – script.js
-   Compatible con: home.html, producto.html, index.html
+   Compatible con: index.html, producto.html, index.html
    ============================================================ */
  
 const STORAGE_KEY = "serpentaire_favorites";
