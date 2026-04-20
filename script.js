@@ -580,25 +580,31 @@ function renderProductPage() {
   setupBagDropdown();
 }
  
-/* ── Dropdown de bolsos (index.html) ──────────────────────── */
+/* ── Dropdown de productos ──────────────────────── */
 function setupBagDropdown() {
-  const dropdownBtn  = document.getElementById("bagDropdownBtn");
-  const dropdownMenu = document.getElementById("bagDropdown");
+  const dropdownBtn  = document.getElementById("productosDropdownBtn");
+  const dropdownMenu = document.getElementById("productosDropdown");
   if (!dropdownBtn || !dropdownMenu) return;
- 
+
+  // Inyectar productos con imagen y nombre
   dropdownMenu.innerHTML = Object.values(products).map(p => `
-    <a href="producto.html?id=${p.id}" class="dropdown-item">${p.name}</a>
+    <a href="producto.html?id=${p.id}" class="dropdown-item" style="display:flex; align-items:center; gap:1rem; padding:0.8rem 1rem; border-bottom:1px solid var(--color-border);">
+      <img src="${p.images[0]}" alt="${p.name}" style="width:50px; height:50px; object-fit:cover; border-radius:4px;">
+      <span style="white-space:normal; line-height:1.2;">${p.name}</span>
+    </a>
   `).join("");
- 
+
   dropdownBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     const isOpen = dropdownMenu.classList.toggle("active");
     dropdownMenu.style.display = isOpen ? "block" : "none";
   });
- 
+
   document.addEventListener("click", () => {
-    dropdownMenu.classList.remove("active");
-    dropdownMenu.style.display = "none";
+    if(dropdownMenu.classList.contains("active")) {
+      dropdownMenu.classList.remove("active");
+      dropdownMenu.style.display = "none";
+    }
   });
 }
  
