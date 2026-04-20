@@ -8,196 +8,317 @@ const CART_KEY    = "serpentaire_cart";
  
 /* ── Catálogo de productos ─────────────────────────────────── */
 const products = {
+  
+  /* ================== FAMILIA: BOLSOS (SERPENTÉ) ================== */
   serpente_marino: {
-    id: "serpente_marino",
-    name: "Bolso Serpenté",
-    price: "445 EUR",
-    priceValue: 445,
+    id: "serpente_marino", name: "Bolso Serpenté Marino", price: "445 EUR", priceValue: 445,
     description: "Bolso de piel marino con emblema dorado y localizador integrado, combinando estilo y seguridad en una pieza exclusiva.",
     details: "Dimensiones: 35 x 25 x 15 cm\nMaterial: Piel premium\nHerrajes dorados\nLocalizador integrado",
     care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.\nEvitar humedad y sol directo.",
-    images: [
-      "serpente_marino.png",
-      "serpente_marino.png",
-      "serpente_marino.png",
-      "serpente_verde.png"
-    ],
+    images: ["serpente_marino.png", "serpente_marino.png", "serpente_marino.png", "serpente_verde.png"],
     colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
-      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "cartera_marino.png"  },
-      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png"  },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "serpente_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png" },
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
-      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png"  }
+      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [
-      { name: "Cartera serpentaire",   image: "cartera_marino.png" },
-      { name: "Tarjetero serpentaire", image: "cartera_beige.png"  }
-    ],
-    suggestions: [
-      { name: "Charm serpentaire",  image: "cartera_beige.png"  },
-      { name: "Serpentina verde",   image: "serpente_verde.png" },
-      { name: "Reloj serpentaire",  image: "cartera_cereza.png" }
-    ]
+    companions: [{ name: "Cartera serpentaire", image: "cartera_marino.png" }, { name: "Tarjetero serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
   },
- 
   serpente_verde: {
-    id: "serpente_verde",
-    name: "Bolso Serpenté Verde",
-    price: "445 EUR",
-    priceValue: 445,
-    description: "Bolso de piel verde con emblema dorado y localizador integrado, combinando estilo y seguridad en una pieza exclusiva.",
+    id: "serpente_verde", name: "Bolso Serpenté Verde", price: "445 EUR", priceValue: 445,
+    description: "Bolso de piel verde con emblema dorado y localizador integrado.",
     details: "Dimensiones: 35 x 25 x 15 cm\nMaterial: Piel premium\nHerrajes dorados\nLocalizador integrado",
-    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.\nEvitar humedad y sol directo.",
-    images: [
-      "serpente_verde.png",
-      "serpente_verde.png",
-      "serpente_marino.png",
-      "serpente_beige.png"
-    ],
+    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.",
+    images: ["serpente_verde.png", "serpente_verde.png", "serpente_marino.png", "serpente_beige.png"],
     colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
-      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "cartera_marino.png"  },
-      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png"  },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "serpente_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png" },
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
-      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png"  }
+      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [
-      { name: "Cartera serpentaire",   image: "cartera_verde.png" },
-      { name: "Tarjetero serpentaire", image: "cartera_beige.png" }
-    ],
-    suggestions: [
-      { name: "Charm serpentaire",  image: "cartera_beige.png"  },
-      { name: "Serpentina verde",   image: "serpente_verde.png" },
-      { name: "Reloj serpentaire",  image: "cartera_cereza.png" }
-    ]
+    companions: [{ name: "Cartera serpentaire", image: "cartera_verde.png" }, { name: "Tarjetero serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
   },
- 
   serpente_cherry: {
-    id: "serpente_cherry",
-    name: "Bolso Serpenté Cherry",
-    price: "445 EUR",
-    priceValue: 445,
-    description: "Bolso cherry con el mismo acabado estructurado y firma dorada de la colección.",
+    id: "serpente_cherry", name: "Bolso Serpenté Cherry", price: "445 EUR", priceValue: 445,
+    description: "Bolso cherry con el mismo acabado estructurado y firma dorada.",
     details: "Dimensiones: 35 x 25 x 15 cm\nMaterial: Piel premium\nHerrajes dorados\nLocalizador integrado",
-    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.\nEvitar humedad y sol directo.",
-    images: [
-      "serpente_cereza.png",
-      "serpente_cereza.png",
-      "serpente_marino.png",
-      "serpente_beige.png"
-    ],
+    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.",
+    images: ["serpente_cereza.png", "serpente_cereza.png", "serpente_marino.png", "serpente_beige.png"],
     colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
-      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "cartera_marino.png"  },
-      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png"  },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "serpente_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png" },
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
-      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png"  }
+      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [
-      { name: "Cartera serpentaire",   image: "cartera_cereza.png" },
-      { name: "Tarjetero serpentaire", image: "cartera_beige.png"  }
-    ],
-    suggestions: [
-      { name: "Charm serpentaire",  image: "cartera_beige.png"  },
-      { name: "Serpentina verde",   image: "serpente_verde.png" },
-      { name: "Reloj serpentaire",  image: "cartera_cereza.png" }
-    ]
+    companions: [{ name: "Cartera serpentaire", image: "cartera_cereza.png" }, { name: "Tarjetero serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
   },
- 
   serpente_chocolate: {
-    id: "serpente_chocolate",
-    name: "Bolso Serpenté Chocolate",
-    price: "445 EUR",
-    priceValue: 445,
-    description: "Bolso de piel chocolate con el emblema dorado característico de la colección Serpentaire.",
+    id: "serpente_chocolate", name: "Bolso Serpenté Chocolate", price: "445 EUR", priceValue: 445,
+    description: "Bolso de piel chocolate con emblema dorado de Serpentaire.",
     details: "Dimensiones: 35 x 25 x 15 cm\nMaterial: Piel premium\nHerrajes dorados\nLocalizador integrado",
-    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.\nEvitar humedad y sol directo.",
-    images: [
-      "cartera_marino.png",
-      "cartera_marino.png",
-      "serpente_marino.png",
-      "serpente_beige.png"
-    ],
+    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.",
+    images: ["serpente_chocolate.png", "serpente_chocolate.png", "serpente_marino.png", "serpente_beige.png"],
     colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
-      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "cartera_marino.png"  },
-      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png"  },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "serpente_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png" },
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
-      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png"  }
+      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [
-      { name: "Cartera serpentaire",   image: "cartera_marino.png" },
-      { name: "Tarjetero serpentaire", image: "cartera_beige.png"  }
-    ],
-    suggestions: [
-      { name: "Charm serpentaire",  image: "cartera_beige.png"  },
-      { name: "Serpentina verde",   image: "serpente_verde.png" },
-      { name: "Reloj serpentaire",  image: "cartera_cereza.png" }
-    ]
+    companions: [{ name: "Cartera serpentaire", image: "cartera_marino.png" }, { name: "Tarjetero serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
   },
- 
   serpente_chicle: {
-    id: "serpente_chicle",
-    name: "Bolso Serpenté Chicle",
-    price: "445 EUR",
-    priceValue: 445,
-    description: "Bolso de piel chicle con el emblema dorado característico de la colección Serpentaire.",
+    id: "serpente_chicle", name: "Bolso Serpenté Chicle", price: "445 EUR", priceValue: 445,
+    description: "Bolso de piel chicle con el emblema dorado característico.",
     details: "Dimensiones: 35 x 25 x 15 cm\nMaterial: Piel premium\nHerrajes dorados\nLocalizador integrado",
-    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.\nEvitar humedad y sol directo.",
-    images: [
-      "serpente_chicle.png",
-      "serpente_chicle.png",
-      "serpente_marino.png",
-      "serpente_beige.png"
-    ],
+    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.",
+    images: ["serpente_chicle.png", "serpente_chicle.png", "serpente_marino.png", "serpente_beige.png"],
     colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
-      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "cartera_marino.png"  },
-      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png"  },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "serpente_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png" },
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
-      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png"  }
+      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [
-      { name: "Cartera serpentaire",   image: "cartera_cichle.png" },
-      { name: "Tarjetero serpentaire", image: "cartera_beige.png"  }
-    ],
-    suggestions: [
-      { name: "Charm serpentaire",  image: "cartera_beige.png"  },
-      { name: "Serpentina verde",   image: "serpente_verde.png" },
-      { name: "Reloj serpentaire",  image: "cartera_cereza.png" }
-    ]
+    companions: [{ name: "Cartera serpentaire", image: "cartera_cichle.png" }, { name: "Tarjetero serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
   },
- 
   serpente_beige: {
-    id: "serpente_beige",
-    name: "Bolso Serpenté Beige",
-    price: "445 EUR",
-    priceValue: 445,
-    description: "Bolso de piel beige con el emblema dorado característico de la colección Serpentaire.",
+    id: "serpente_beige", name: "Bolso Serpenté Beige", price: "445 EUR", priceValue: 445,
+    description: "Bolso de piel beige con el emblema dorado característico.",
     details: "Dimensiones: 35 x 25 x 15 cm\nMaterial: Piel premium\nHerrajes dorados\nLocalizador integrado",
-    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.\nEvitar humedad y sol directo.",
-    images: [
-      "serpente_beige.png",
-      "serpente_beige.png",
-      "serpente_marino.png",
-      "serpente_verde.png"
-    ],
+    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.",
+    images: ["serpente_beige.png", "serpente_beige.png", "serpente_marino.png", "serpente_verde.png"],
     colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
-      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "cartera_marino.png"  },
-      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png"  },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpente_chocolate", image: "serpente_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpente_verde",     image: "serpente_verde.png" },
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
-      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png"  }
+      { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [
-      { name: "Cartera serpentaire",   image: "cartera_beige.png" },
-      { name: "Tarjetero serpentaire", image: "cartera_beige.png" }
+    companions: [{ name: "Cartera serpentaire", image: "cartera_beige.png" }, { name: "Tarjetero serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
+  },
+
+  /* ================== FAMILIA: CARTERAS ================== */
+  cartera_marino: {
+    id: "cartera_marino", name: "Cartera Serpentaire Marino", price: "445 EUR", priceValue: 445,
+    description: "Cartera de piel marino con emblema dorado y localizador integrado.",
+    details: "Material: Piel premium\nHerrajes dorados\nDiseño compacto",
+    care: "Limpiar con paño suave y seco.\nGuardar en su funda protectora.",
+    images: ["cartera_marino.png", "cartera_marino.png", "cartera_marino.png", "cartera_marino.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "cartera_marino",    image: "cartera_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "cartera_cherry",    image: "cartera_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "cartera_chocolate", image: "cartera_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "cartera_verde",     image: "cartera_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "cartera_chicle",    image: "cartera_cichle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "cartera_beige",     image: "cartera_beige.png" }
     ],
-    suggestions: [
-      { name: "Charm serpentaire",  image: "cartera_beige.png"  },
-      { name: "Serpentina verde",   image: "serpente_verde.png" },
-      { name: "Reloj serpentaire",  image: "cartera_cereza.png" }
-    ]
+    companions: [{ name: "Bolso serpentaire", image: "serpente_marino.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
+    suggestions: [{ name: "Serpentina", image: "mockup-serpentinas.png" }]
+  },
+  cartera_verde: {
+    id: "cartera_verde", name: "Cartera Serpentaire Verde", price: "445 EUR", priceValue: 445,
+    description: "Cartera de piel verde con emblema dorado y localizador integrado.",
+    details: "Material: Piel premium\nHerrajes dorados\nDiseño compacto",
+    care: "Limpiar con paño suave y seco.",
+    images: ["cartera_verde.png", "cartera_verde.png", "cartera_verde.png", "cartera_verde.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "cartera_marino",    image: "cartera_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "cartera_cherry",    image: "cartera_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "cartera_chocolate", image: "cartera_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "cartera_verde",     image: "cartera_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "cartera_chicle",    image: "cartera_cichle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "cartera_beige",     image: "cartera_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_verde.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
+    suggestions: [{ name: "Serpentina", image: "mockup-serpentinas.png" }]
+  },
+  cartera_cherry: {
+    id: "cartera_cherry", name: "Cartera Serpentaire Cherry", price: "445 EUR", priceValue: 445,
+    description: "Cartera de piel cherry con emblema dorado y localizador integrado.",
+    details: "Material: Piel premium\nHerrajes dorados\nDiseño compacto",
+    care: "Limpiar con paño suave y seco.",
+    images: ["cartera_cereza.png", "cartera_cereza.png", "cartera_cereza.png", "cartera_cereza.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "cartera_marino",    image: "cartera_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "cartera_cherry",    image: "cartera_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "cartera_chocolate", image: "cartera_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "cartera_verde",     image: "cartera_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "cartera_chicle",    image: "cartera_cichle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "cartera_beige",     image: "cartera_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_cherry.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
+    suggestions: [{ name: "Serpentina", image: "mockup-serpentinas.png" }]
+  },
+  cartera_chocolate: {
+    id: "cartera_chocolate", name: "Cartera Serpentaire Chocolate", price: "445 EUR", priceValue: 445,
+    description: "Cartera de piel chocolate con emblema dorado y localizador integrado.",
+    details: "Material: Piel premium\nHerrajes dorados\nDiseño compacto",
+    care: "Limpiar con paño suave y seco.",
+    images: ["cartera_chocolate.png", "cartera_chocolate.png", "cartera_chocolate.png", "cartera_chocolate.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "cartera_marino",    image: "cartera_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "cartera_cherry",    image: "cartera_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "cartera_chocolate", image: "cartera_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "cartera_verde",     image: "cartera_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "cartera_chicle",    image: "cartera_cichle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "cartera_beige",     image: "cartera_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_chocolate.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
+    suggestions: [{ name: "Serpentina", image: "mockup-serpentinas.png" }]
+  },
+  cartera_chicle: {
+    id: "cartera_chicle", name: "Cartera Serpentaire Chicle", price: "445 EUR", priceValue: 445,
+    description: "Cartera de piel chicle con emblema dorado y localizador integrado.",
+    details: "Material: Piel premium\nHerrajes dorados\nDiseño compacto",
+    care: "Limpiar con paño suave y seco.",
+    images: ["cartera_cichle.png", "cartera_cichle.png", "cartera_cichle.png", "cartera_cichle.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "cartera_marino",    image: "cartera_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "cartera_cherry",    image: "cartera_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "cartera_chocolate", image: "cartera_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "cartera_verde",     image: "cartera_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "cartera_chicle",    image: "cartera_cichle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "cartera_beige",     image: "cartera_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_chicle.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
+    suggestions: [{ name: "Serpentina", image: "mockup-serpentinas.png" }]
+  },
+  cartera_beige: {
+    id: "cartera_beige", name: "Cartera Serpentaire Beige", price: "445 EUR", priceValue: 445,
+    description: "Cartera de piel beige con emblema dorado y localizador integrado.",
+    details: "Material: Piel premium\nHerrajes dorados\nDiseño compacto",
+    care: "Limpiar con paño suave y seco.",
+    images: ["cartera_beige.png", "cartera_beige.png", "cartera_beige.png", "cartera_beige.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "cartera_marino",    image: "cartera_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "cartera_cherry",    image: "cartera_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "cartera_chocolate", image: "cartera_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "cartera_verde",     image: "cartera_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "cartera_chicle",    image: "cartera_cichle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "cartera_beige",     image: "cartera_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_beige.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
+    suggestions: [{ name: "Serpentina", image: "mockup-serpentinas.png" }]
+  },
+
+  /* ================== FAMILIA: SERPENTINAS ================== */
+  serpentina_marino: {
+    id: "serpentina_marino", name: "Serpentina Marino", price: "445 EUR", priceValue: 445,
+    description: "Serpentina de piel marino con emblema dorado, perfecta como accesorio exclusivo.",
+    details: "Material: Piel premium\nHerrajes dorados\nAccesorio versátil",
+    care: "Limpiar con paño suave y seco.",
+    images: ["serpentina_marino.png", "serpentina_marino.png", "serpentina_marino.png", "serpentina_marino.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpentina_marino",    image: "serpentina_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "serpentina_cherry",    image: "serpentina_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpentina_chocolate", image: "serpentina_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpentina_verde",     image: "serpentina_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "serpentina_chicle",    image: "serpentina_chicle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "serpentina_beige",     image: "serpentina_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_marino.png" }, { name: "Cartera serpentaire", image: "cartera_marino.png" }],
+    suggestions: [{ name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }]
+  },
+  serpentina_verde: {
+    id: "serpentina_verde", name: "Serpentina Verde", price: "445 EUR", priceValue: 445,
+    description: "Serpentina de piel verde con emblema dorado, perfecta como accesorio exclusivo.",
+    details: "Material: Piel premium\nHerrajes dorados\nAccesorio versátil",
+    care: "Limpiar con paño suave y seco.",
+    images: ["serpentina_verde.png", "serpentina_verde.png", "serpentina_verde.png", "serpentina_verde.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpentina_marino",    image: "serpentina_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "serpentina_cherry",    image: "serpentina_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpentina_chocolate", image: "serpentina_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpentina_verde",     image: "serpentina_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "serpentina_chicle",    image: "serpentina_chicle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "serpentina_beige",     image: "serpentina_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_verde.png" }, { name: "Cartera serpentaire", image: "cartera_verde.png" }],
+    suggestions: [{ name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }]
+  },
+  serpentina_cherry: {
+    id: "serpentina_cherry", name: "Serpentina Cherry", price: "445 EUR", priceValue: 445,
+    description: "Serpentina de piel cherry con emblema dorado, perfecta como accesorio exclusivo.",
+    details: "Material: Piel premium\nHerrajes dorados\nAccesorio versátil",
+    care: "Limpiar con paño suave y seco.",
+    images: ["serpentina_cereza.png", "serpentina_cereza.png", "serpentina_cereza.png", "serpentina_cereza.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpentina_marino",    image: "serpentina_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "serpentina_cherry",    image: "serpentina_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpentina_chocolate", image: "serpentina_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpentina_verde",     image: "serpentina_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "serpentina_chicle",    image: "serpentina_chicle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "serpentina_beige",     image: "serpentina_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_cherry.png" }, { name: "Cartera serpentaire", image: "cartera_cereza.png" }],
+    suggestions: [{ name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }]
+  },
+  serpentina_chocolate: {
+    id: "serpentina_chocolate", name: "Serpentina Chocolate", price: "445 EUR", priceValue: 445,
+    description: "Serpentina de piel chocolate con emblema dorado, perfecta como accesorio exclusivo.",
+    details: "Material: Piel premium\nHerrajes dorados\nAccesorio versátil",
+    care: "Limpiar con paño suave y seco.",
+    images: ["serpentina_chocolate.png", "serpentina_chocolate.png", "serpentina_chocolate.png", "serpentina_chocolate.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpentina_marino",    image: "serpentina_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "serpentina_cherry",    image: "serpentina_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpentina_chocolate", image: "serpentina_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpentina_verde",     image: "serpentina_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "serpentina_chicle",    image: "serpentina_chicle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "serpentina_beige",     image: "serpentina_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_chocolate.png" }, { name: "Cartera serpentaire", image: "cartera_chocolate.png" }],
+    suggestions: [{ name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }]
+  },
+  serpentina_chicle: {
+    id: "serpentina_chicle", name: "Serpentina Chicle", price: "445 EUR", priceValue: 445,
+    description: "Serpentina de piel chicle con emblema dorado, perfecta como accesorio exclusivo.",
+    details: "Material: Piel premium\nHerrajes dorados\nAccesorio versátil",
+    care: "Limpiar con paño suave y seco.",
+    images: ["serpentina_chicle.png", "serpentina_chicle.png", "serpentina_chicle.png", "serpentina_chicle.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpentina_marino",    image: "serpentina_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "serpentina_cherry",    image: "serpentina_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpentina_chocolate", image: "serpentina_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpentina_verde",     image: "serpentina_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "serpentina_chicle",    image: "serpentina_chicle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "serpentina_beige",     image: "serpentina_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_chicle.png" }, { name: "Cartera serpentaire", image: "cartera_cichle.png" }],
+    suggestions: [{ name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }]
+  },
+  serpentina_beige: {
+    id: "serpentina_beige", name: "Serpentina Beige", price: "445 EUR", priceValue: 445,
+    description: "Serpentina de piel beige con emblema dorado, perfecta como accesorio exclusivo.",
+    details: "Material: Piel premium\nHerrajes dorados\nAccesorio versátil",
+    care: "Limpiar con paño suave y seco.",
+    images: ["serpentina_beige.png", "serpentina_beige.png", "serpentina_beige.png", "serpentina_beige.png"],
+    colors: [
+      { name: "Marino",    hex: "#1a2436", id: "serpentina_marino",    image: "serpentina_marino.png" },
+      { name: "Cherry",    hex: "#8c1d23", id: "serpentina_cherry",    image: "serpentina_cereza.png" },
+      { name: "Chocolate", hex: "#6b3a00", id: "serpentina_chocolate", image: "serpentina_chocolate.png" },
+      { name: "Verde",     hex: "#0f5b39", id: "serpentina_verde",     image: "serpentina_verde.png" },
+      { name: "Chicle",    hex: "#ef68bf", id: "serpentina_chicle",    image: "serpentina_chicle.png" },
+      { name: "Beige",     hex: "#d9bd89", id: "serpentina_beige",     image: "serpentina_beige.png" }
+    ],
+    companions: [{ name: "Bolso serpentaire", image: "serpente_beige.png" }, { name: "Cartera serpentaire", image: "cartera_beige.png" }],
+    suggestions: [{ name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }]
   }
 };
  
@@ -231,7 +352,7 @@ function removeFavorite(id) {
   syncFavoriteButtons();
 }
  
-/* ── Carrito (sessionStorage para esta demo) ───────────────── */
+/* ── Carrito (sessionStorage) ──────────────────────────────── */
 function getCart() {
   try { return JSON.parse(sessionStorage.getItem(CART_KEY)) || []; }
   catch { return []; }
@@ -402,17 +523,23 @@ function setupHeaderIcons() {
   });
 }
  
-/* ── Dropdown de productos (Ahora independiente) ────────────── */
+/* ── Dropdown de productos (3 categorías fijas) ────────────── */
 function setupBagDropdown() {
   const dropdownBtn  = document.getElementById("productosDropdownBtn");
   const dropdownMenu = document.getElementById("productosDropdown");
   if (!dropdownBtn || !dropdownMenu) return;
 
-  // Inyectar productos
-  dropdownMenu.innerHTML = Object.values(products).map(p => `
-    <a href="producto.html?id=${p.id}" class="dropdown-item" style="display:flex; align-items:center; gap:1rem; padding:0.8rem 1rem; border-bottom:1px solid var(--color-border); text-decoration:none;">
-      <img src="${p.images[0]}" alt="${p.name}" style="width:50px; height:50px; object-fit:cover; border-radius:4px;">
-      <span style="white-space:normal; line-height:1.2; color:var(--color-primary);">${p.name}</span>
+  // Actualizados los links para que vayan al primer elemento real de cada familia
+  const productCategories = [
+    { name: "Serpenté",    image: "serpente_marino.png",    link: "producto.html?id=serpente_marino" },
+    { name: "Serpentinas", image: "mockup-serpentinas.png", link: "producto.html?id=serpentina_verde" },
+    { name: "Carteras",    image: "cartera_marino.png",     link: "producto.html?id=cartera_chocolate" }
+  ];
+
+  dropdownMenu.innerHTML = productCategories.map(cat => `
+    <a href="${cat.link}" class="dropdown-item" style="display:flex; align-items:center; gap:1rem; padding:0.8rem 1rem; border-bottom:1px solid var(--color-border); text-decoration:none;">
+      <img src="${cat.image}" alt="${cat.name}" style="width:50px; height:50px; object-fit:cover; border-radius:4px;">
+      <span style="white-space:normal; line-height:1.2; color:var(--color-primary);">${cat.name}</span>
     </a>
   `).join("");
 
@@ -437,6 +564,7 @@ function renderProductPage() {
  
   const params    = new URLSearchParams(window.location.search);
   const productId = params.get("id") || "serpente_marino";
+  // Si el id no existe, volvemos a marino por defecto
   const product   = products[productId] || products.serpente_marino;
  
   let currentImageIndex = 0;
@@ -524,6 +652,7 @@ function renderProductPage() {
         colorGrid.querySelectorAll(".color-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         const targetId = btn.dataset.productId;
+        // Si clickas otro color, viaja a su propio enlace (ej: cartera_beige a cartera_verde)
         if (targetId && targetId !== productId) {
           const currentPage = window.location.pathname.split("/").pop() || "producto.html";
           window.location.href = `${currentPage}?id=${targetId}`;
@@ -608,7 +737,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartUI();
   setupSharedEvents();
   setupHeaderIcons();
-  setupBagDropdown(); // Se ejecuta ahora en ambas páginas
-  renderProductPage(); // Se ejecuta de forma segura solo en producto.html
+  setupBagDropdown();
+  renderProductPage(); 
   syncFavoriteButtons();
 });
