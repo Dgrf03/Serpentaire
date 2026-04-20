@@ -1,6 +1,6 @@
 /* ============================================================
    SERPENTAIRE – script.js
-   Compatible con: index.html, producto.html, index.html
+   Compatible con: index.html, producto.html
    ============================================================ */
  
 const STORAGE_KEY = "serpentaire_favorites";
@@ -259,14 +259,12 @@ function removeFromCart(index) {
 function updateCartUI() {
   const cart = getCart();
  
-  // Badge
   const badge = document.getElementById("cartCountBadge");
   if (badge) {
     badge.textContent = cart.length > 0 ? cart.length : "0";
     badge.style.display = cart.length > 0 ? "flex" : "none";
   }
  
-  // Container 
   const container = document.getElementById("cartItemsContainer");
   const totalEl   = document.getElementById("cartTotal");
   if (!container) return;
@@ -361,12 +359,11 @@ function closeWishlist() { closeDrawer("wishlistDrawer"); document.getElementByI
 function openCart()      { openDrawer("cartDrawer"); }
 function closeCart()     { closeDrawer("cartDrawer"); document.getElementById("uiOverlay")?.classList.remove("active"); }
  
-/* ── Eventos compartidos (wishlist, overlay, like-btns) ───── */
+/* ── Eventos compartidos ───────────────────────────────────── */
 function setupSharedEvents() {
   document.getElementById("wishlistBtn")?.addEventListener("click", openWishlist);
   document.getElementById("closeWishlistBtn")?.addEventListener("click", closeWishlist);
   
-  // Esto ahora sí funciona correctamente porque el HTML tiene el ID cartBtn
   document.getElementById("cartBtn")?.addEventListener("click", openCart);
   document.getElementById("closeCartBtn")?.addEventListener("click", closeCart);
  
@@ -387,11 +384,10 @@ function setupSharedEvents() {
   });
 }
  
-/* ── Header: iconos extra (buscar, usuario) ─────────────────── */
+/* ── Header: iconos extra ──────────────────────────────────── */
 function setupHeaderIcons() {
   const iconButtons = document.querySelectorAll(".header-icons .icon-btn");
   iconButtons.forEach(btn => {
-    // Si son la cesta o favoritos, saltar este paso porque ya lo gestiona setupSharedEvents()
     if (btn.id === "wishlistBtn" || btn.id === "cartBtn") return;
  
     btn.addEventListener("click", () => {
@@ -406,6 +402,34 @@ function setupHeaderIcons() {
   });
 }
  
+/* ── Dropdown de productos (Ahora independiente) ────────────── */
+function setupBagDropdown() {
+  const dropdownBtn  = document.getElementById("productosDropdownBtn");
+  const dropdownMenu = document.getElementById("productosDropdown");
+  if (!dropdownBtn || !dropdownMenu) return;
+
+  // Inyectar productos
+  dropdownMenu.innerHTML = Object.values(products).map(p => `
+    <a href="producto.html?id=${p.id}" class="dropdown-item" style="display:flex; align-items:center; gap:1rem; padding:0.8rem 1rem; border-bottom:1px solid var(--color-border); text-decoration:none;">
+      <img src="${p.images[0]}" alt="${p.name}" style="width:50px; height:50px; object-fit:cover; border-radius:4px;">
+      <span style="white-space:normal; line-height:1.2; color:var(--color-primary);">${p.name}</span>
+    </a>
+  `).join("");
+
+  dropdownBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdownMenu.classList.toggle("active");
+    dropdownMenu.style.display = isOpen ? "block" : "none";
+  });
+
+  document.addEventListener("click", () => {
+    if(dropdownMenu.classList.contains("active")) {
+      dropdownMenu.classList.remove("active");
+      dropdownMenu.style.display = "none";
+    }
+  });
+}
+
 /* ── Renderizado de la página de producto ──────────────────── */
 function renderProductPage() {
   const mainImage = document.getElementById("mainImage");
@@ -576,36 +600,6 @@ function renderProductPage() {
       }
     });
   });
- 
-  setupBagDropdown();
-}
- 
-/* ── Dropdown de productos ──────────────────────── */
-function setupBagDropdown() {
-  const dropdownBtn  = document.getElementById("productosDropdownBtn");
-  const dropdownMenu = document.getElementById("productosDropdown");
-  if (!dropdownBtn || !dropdownMenu) return;
-
-  // Inyectar productos con imagen y nombre
-  dropdownMenu.innerHTML = Object.values(products).map(p => `
-    <a href="producto.html?id=${p.id}" class="dropdown-item" style="display:flex; align-items:center; gap:1rem; padding:0.8rem 1rem; border-bottom:1px solid var(--color-border);">
-      <img src="${p.images[0]}" alt="${p.name}" style="width:50px; height:50px; object-fit:cover; border-radius:4px;">
-      <span style="white-space:normal; line-height:1.2;">${p.name}</span>
-    </a>
-  `).join("");
-
-  dropdownBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isOpen = dropdownMenu.classList.toggle("active");
-    dropdownMenu.style.display = isOpen ? "block" : "none";
-  });
-
-  document.addEventListener("click", () => {
-    if(dropdownMenu.classList.contains("active")) {
-      dropdownMenu.classList.remove("active");
-      dropdownMenu.style.display = "none";
-    }
-  });
 }
  
 /* ── Init ───────────────────────────────────────────────────── */
@@ -614,6 +608,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartUI();
   setupSharedEvents();
   setupHeaderIcons();
-  renderProductPage();
+  setupBagDropdown(); // Se ejecuta ahora en ambas páginas
+  renderProductPage(); // Se ejecuta de forma segura solo en producto.html
   syncFavoriteButtons();
 });
