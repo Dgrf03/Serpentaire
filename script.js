@@ -24,8 +24,8 @@ const products = {
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
       { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [{ name: "Cartera serpentaire", image: "cartera_marino.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
-    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
+    companions: [{ name: "Terjetero cherry", image: "tarjetero cherry .png" }, { name: "Charm", image: "llavero serpentaire .png" }],
+    suggestions: [{ name: "Cartera marino", image: "cartera marino .png" }, { name: "Reloj", image: "reloj serpentaire .png" }, { name: "Serpentina beige", image: "serpentina beige  .png" }]
   },
   serpente_verde: {
     id: "serpente_verde", name: "Bolso Serpenté Verde", price: "445 EUR", priceValue: 445,
@@ -41,8 +41,8 @@ const products = {
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
       { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [{ name: "Cartera serpentaire", image: "cartera_verde.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
-    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
+    companions: [{ name: "Cartera marino", image: "cartera marino .png" }, { name: "Tarjetero chocolate", image: "tarjetero chocolate .png" }],
+    suggestions: [{ name: "Serpentina cherry", image: "serpentina cherry .png" }, { name: "Charm", image: "llavero serpentaire .png" }, { name: "Cartera beige", image: "cartera_beige.png" }]
   },
   serpente_cherry: {
     id: "serpente_cherry", name: "Bolso Serpenté Cherry", price: "445 EUR", priceValue: 445,
@@ -58,8 +58,8 @@ const products = {
       { name: "Chicle",    hex: "#ef68bf", id: "serpente_chicle",    image: "serpente_chicle.png" },
       { name: "Beige",     hex: "#d9bd89", id: "serpente_beige",     image: "serpente_beige.png" }
     ],
-    companions: [{ name: "Cartera serpentaire", image: "cartera_cereza.png" }, { name: "Tarjetero serpentaire", image: "tarjetero chicle .png" }],
-    suggestions: [{ name: "Charm serpentaire", image: "cartera_beige.png" }, { name: "Serpentina verde", image: "serpente_verde.png" }, { name: "Reloj serpentaire", image: "cartera_cereza.png" }]
+    companions: [{ name: "Tarjetero verde", image: "tarjetero verde .png" }, { name: "Reloj", image: "reloj serpentaire .png" }],
+    suggestions: [{ name: "Tarjetero marino", image: "tarjetero marino .png" }, { name: "Serpenté verde", image: "serpente_verde.png" }, { name: "Serpentina chocolate", image: "serpentina chocolate .png" }]
   },
   serpente_chocolate: {
     id: "serpente_chocolate", name: "Bolso Serpenté Chocolate", price: "445 EUR", priceValue: 445,
