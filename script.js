@@ -32,7 +32,7 @@ const products = {
   },
   serpente_verde: {
     id: "serpente_verde", name: "Bolso Serpenté Verde", price: "445 EUR", priceValue: 445,
-    description: "Bolso de piel verde con emblema dorado y localizador integrado.",
+    description: "Bolso de piel marino con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente_verde.png", "serpente-verde-lateral.png", "serpente verde trasera .png", "mock up verde .png"],
