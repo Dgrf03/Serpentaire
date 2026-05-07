@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra - SERPENTAIRE</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background: var(--color-bg);">
+  <header class="header" style="text-align: center; padding: 2rem;">
+    <h1><a href="index.html" style="color: var(--color-primary); font-size: 3rem; font-weight: 700;">SERPENTAIRE</a></h1>
+  </header>
+  <main style="max-width: 800px; margin: 2rem auto; background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    <h2 style="color: var(--color-primary); text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">Pago Seguro</h2>
+    <form id="checkoutForm" style="display: flex; flex-direction: column; gap: 1.5rem; font-family: var(--font-body);">
+      <div>
+        <h3 style="color: var(--color-primary); margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Datos de envío</h3>
+        <input type="text" placeholder="Nombre completo" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--color-border);">
+        <input type="text" placeholder="Dirección completa" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--color-border);">
+        <input type="text" placeholder="Ciudad" required style="width: 48%; padding: 0.8rem; border: 1px solid var(--color-border);">
+        <input type="text" placeholder="Código Postal" required style="width: 48%; float: right; padding: 0.8rem; border: 1px solid var(--color-border);">
+      </div>
+      <div style="margin-top: 1rem;">
+        <h3 style="color: var(--color-primary); margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Método de Pago</h3>
+        <input type="text" placeholder="Número de Tarjeta" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--color-border);">
+        <input type="text" placeholder="MM/AA" required style="width: 48%; padding: 0.8rem; border: 1px solid var(--color-border);">
+        <input type="text" placeholder="CVC" required style="width: 48%; float: right; padding: 0.8rem; border: 1px solid var(--color-border);">
+      </div>
+      <button type="submit" class="drawer-checkout-btn" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem;">PAGAR AHORA</button>
+    </form>
+  </main>
+      <script>
+    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      sessionStorage.removeItem("serpentaire_cart");
+      
+      // Creamos una pantalla de éxito bonita
+      const main = document.querySelector("main");
+      main.innerHTML = `
+        <div style="text-align:center; padding: 4rem 2rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="width: 80px; height: 80px; margin-bottom: 2rem;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+          <h2 style="color: var(--color-primary); font-size: 2.5rem; margin-bottom: 1rem;">¡Pago realizado con éxito!</h2>
+          <p style="font-family: var(--font-body); font-size: 1.2rem; color: var(--color-text-medium);">Gracias por confiar en Serpentaire. Redirigiendo al inicio...</p>
+        </div>
+      `;
+
+      // Redirigimos a los 3 segundos
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
