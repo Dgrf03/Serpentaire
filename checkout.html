@@ -30,30 +30,22 @@
       <button type="submit" class="drawer-checkout-btn" style="margin-top: 2rem; font-size: 1.2rem; padding: 1.2rem;">PAGAR AHORA</button>
     </form>
   </main>
-      <script>
+  <script>
     document.getElementById("checkoutForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      sessionStorage.removeItem("serpentaire_cart");
-      
-      // Creamos una pantalla de éxito bonita
+      sessionStorage.removeItem("serpentaire_cart"); 
       const main = document.querySelector("main");
       main.innerHTML = `
         <div style="text-align:center; padding: 4rem 2rem;">
           <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="width: 80px; height: 80px; margin-bottom: 2rem;">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            <circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line>
           </svg>
           <h2 style="color: var(--color-primary); font-size: 2.5rem; margin-bottom: 1rem;">¡Pago realizado con éxito!</h2>
           <p style="font-family: var(--font-body); font-size: 1.2rem; color: var(--color-text-medium);">Gracias por confiar en Serpentaire. Redirigiendo al inicio...</p>
         </div>
       `;
-
-      // Redirigimos a los 3 segundos
-      setTimeout(() => {
-        window.location.href = "index.html";
-      }, 3000);
+      setTimeout(() => { window.location.href = "index.html"; }, 3000);
     });
   </script>
 </body>
