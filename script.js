@@ -15,10 +15,17 @@ const products = {
   /* ================== FAMILIA: BOLSOS (SERPENTÉ) ================== */
   serpente_marino: {
     id: "serpente_marino", name: "Bolso Serpenté Marino", price: "445 EUR", priceValue: 445,
+<<<<<<< HEAD
     description: "Bolso de piel marino con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente_marino.png", "serpente-marino-lateral .png", "serpente azul parte trasera .png", "mock.up.serpente.marino.png"],
+=======
+    description: "Bolso de piel marino con emblema dorado y localizador integrado, combinando estilo y seguridad en una pieza exclusiva.",
+    details: textLocalizador,
+    care: textGarantia,
+    images: ["serpente_marino.png", "serpente-marino-lateral .png", "serpente azul parte trasera .png", "mock up serpente marino .png"],
+>>>>>>> ada5d414fe1b22d230f1205e7fd8ad7ae2066623
     colors: [
       { name: "Marino",    hex: "#1a2436", id: "serpente_marino",    image: "serpente_marino.png" },
       { name: "Cherry",    hex: "#8c1d23", id: "serpente_cherry",    image: "serpente_cereza.png" },
@@ -32,7 +39,11 @@ const products = {
   },
   serpente_verde: {
     id: "serpente_verde", name: "Bolso Serpenté Verde", price: "445 EUR", priceValue: 445,
+<<<<<<< HEAD
     description: "Bolso de piel verde con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
+=======
+    description: "Bolso de piel marino con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
+>>>>>>> ada5d414fe1b22d230f1205e7fd8ad7ae2066623
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente_verde.png", "serpente-verde-lateral.png", "serpente verde trasera .png", "mock up verde .png"],
@@ -49,7 +60,11 @@ const products = {
   },
   serpente_cherry: {
     id: "serpente_cherry", name: "Bolso Serpenté Cherry", price: "445 EUR", priceValue: 445,
+<<<<<<< HEAD
     description: "Bolso de piel cherry con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
+=======
+    description: "Bolso cherry con el mismo acabado estructurado y firma dorada.",
+>>>>>>> ada5d414fe1b22d230f1205e7fd8ad7ae2066623
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente_cereza.png", "serpente-cherry-lateral.png", "serpente cherry trasera .png", "mockup serpente cherry .png"],
@@ -66,7 +81,11 @@ const products = {
   },
   serpente_chocolate: {
     id: "serpente_chocolate", name: "Bolso Serpenté Chocolate", price: "445 EUR", priceValue: 445,
+<<<<<<< HEAD
     description: "Bolso de piel chocolate con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
+=======
+    description: "Bolso de piel chocolate con emblema dorado de Serpentaire.",
+>>>>>>> ada5d414fe1b22d230f1205e7fd8ad7ae2066623
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente╠ü chocolate .png", "serpente-chocolate-lateral.png", "serpente chocolate trasera .png", "mock up serpente chocolate 2 .png"],
@@ -83,7 +102,11 @@ const products = {
   },
   serpente_chicle: {
     id: "serpente_chicle", name: "Bolso Serpenté Chicle", price: "445 EUR", priceValue: 445,
+<<<<<<< HEAD
     description: "Bolso de piel chicle con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
+=======
+    description: "Bolso de piel chicle con el emblema dorado característico.",
+>>>>>>> ada5d414fe1b22d230f1205e7fd8ad7ae2066623
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente_chicle.png", "serpente-chicle-lateral.png", "serpente chicle trasera .png"],
@@ -100,7 +123,11 @@ const products = {
   },
   serpente_beige: {
     id: "serpente_beige", name: "Bolso Serpenté Beige", price: "445 EUR", priceValue: 445,
+<<<<<<< HEAD
     description: "Bolso de piel beige con emblema dorado y localizador integrado, con autonomía de hasta 4 años y sustitución gratuita.",
+=======
+    description: "Bolso de piel beige con el emblema dorado característico.",
+>>>>>>> ada5d414fe1b22d230f1205e7fd8ad7ae2066623
     details: textLocalizador,
     care: textGarantia,
     images: ["serpente╠ü beige .png", "serpente-beige-lateral.png", "serpente beige trasero .png", "mockup serpente beige 1 .png"],
